@@ -40,15 +40,13 @@ following fields:
 ## Project Structure
 
 ```
-sales-data-analysis/
+retail-sales-market-basket-analysis/
 ├── data/
 │   └── sales_data.ftr        # raw dataset
-├── notebook/
-│   └── Sales_Analysis.ipynb  # main analysis notebook
-├── images/                   # exported chart images for this README
+├── Sales_Analysis.ipynb  # main analysis notebook
+│   
 ├── README.md
 ├── requirements.txt
-├── LICENSE
 └── .gitignore
 ```
 
@@ -93,14 +91,6 @@ Run all cells from top to bottom.
   cross-sell opportunity (Lift ≈ 2.1–2.2)
 - A small set of "A" tier products drives the majority of total revenue
 
-## Example Visualizations
-
-<p align="center">
-  <img src="images/sales_by_month.png" width="45%" alt="Sales by Month" />
-  <img src="images/product_co_purchase_network.png" width="45%" alt="Product Co-Purchase Network" />
-</p>
-
-*(Export your favorite charts from the notebook into `images/` and update the paths above.)*
 
 ## Future Improvements
 
@@ -110,6 +100,3 @@ Run all cells from top to bottom.
 - Add automated data-quality checks (e.g. with `pandera`)
 - Parameterize the notebook (e.g. with `papermill`) to re-run it on new data drops
 
-## License
-
-This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
