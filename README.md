@@ -40,11 +40,11 @@ following fields:
 ## Project Structure
 
 ```
-retail-sales-market-basket-analysis/
+sales-data-analysis/
 ├── data/
 │   └── sales_data.ftr        # raw dataset
 ├── Sales_Analysis.ipynb  # main analysis notebook
-│   
+├── images/                   # exported chart images for this README
 ├── README.md
 ├── requirements.txt
 └── .gitignore
@@ -83,14 +83,52 @@ Run all cells from top to bottom.
 
 ## Key Findings
 
-- Sales show clear seasonality, peaking in specific months
-- A small number of cities account for a disproportionate share of orders
-- Lower-priced products sell in much higher volumes than premium products
-- Orders cluster around specific hours of the day
-- Phones are frequently purchased together with their matching charging cable — a clear
-  cross-sell opportunity (Lift ≈ 2.1–2.2)
-- A small set of "A" tier products drives the majority of total revenue
+**Sales trends**
+- Sales show clear seasonality, peaking in **December**, likely driven by increased holiday shopping and year-end demand.
+- **San Francisco** accounts for the largest share of total revenue, while a small number of major cities contribute a disproportionately large share of overall sales.
+  cities accounting for a disproportionate share overall
+- Lower-priced products sell in much higher volumes than premium products, whereas high-priced products such as laptops and smartphones generate a significantly larger share of total revenue.
+- Orders increase rapidly after **7:00 AM** and reach their highest sales at around **7:00 PM**, with another strong sales period between **11:00 AM and 12:00 PM**. These peak hours represent the best opportunities for promotional campaigns, inventory readiness, and staffing.
 
+**Market basket analysis**
+- Google Phone is frequently purchased together with a USB-C Charging Cable, indicating a strong cross-selling opportunity (Lift ≈ 2.08).
+- iPhone is commonly purchased with a Lightning Charging Cable (Lift ≈ 2.16), suggesting that recommending compatible accessories during checkout could increase average order value.
+
+### Revenue Segmentation (ABC / Pareto)
+
+- Pareto analysis reveals that just **7 out of 19 products (36.8% of the product catalog)** generate nearly **80% of total revenue**, demonstrating a strong concentration of revenue among a relatively small number of products.
+- The company's primary revenue drivers are **MacBook Pro Laptop**, **iPhone**, **ThinkPad Laptop**, and **Google Phone**. These high-value products account for a substantial share of overall sales revenue and should be prioritized in inventory planning, pricing strategies, and marketing campaigns.
+- **A-tier products** (36.8% of the catalog) contribute approximately **80% of total revenue**, while **B-tier products** (26.3% of the catalog) contribute the next **15%**. The remaining **C-tier products** (36.8% of the catalog) generate only about **5% of revenue**, making them suitable candidates for promotional bundles, cross-selling strategies, or portfolio optimization.
+
+## Example Visualizations
+
+<table align="center">
+
+<tr>
+<td align="center">
+<img src="images/units_sold_vs_avg_price.png" width="420"><br>
+<b>Units Sold vs. Average Price</b>
+</td>
+
+<td align="center">
+<img src="images/sales_by_hour.png" width="420"><br>
+<b>Sales by Hour</b>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<img src="images/market_basket_network.png" width="420"><br>
+<b>Market Basket Analysis</b>
+</td>
+
+<td align="center">
+<img src="images/pareto_analysis.png" width="420"><br>
+<b>Pareto Analysis</b>
+</td>
+</tr>
+
+</table>
 
 ## Future Improvements
 
